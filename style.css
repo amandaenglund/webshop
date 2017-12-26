@@ -1,17 +1,27 @@
 body {
-    margin: 0px;
-    padding: 0px;
-}
+    font-family: 'Open Sans', sans-serif;
 
-
-
-/* Här stylar vi menybaren*/
-#navbar {
 
 }
 
+.navbar {
+    padding: 20px 5px;
+    color: rgb(255, 0, 153);
+    background-color: rgb(244, 240, 240);
 
-/* Här stylar vi footern*/
-#footerStyle {
+    letter-spacing: 2px;
+}
+
+.navbar a {
+    color: rgb(255, 0, 153);
+}
+
+.jumbotron {
+    margin: 150px 0px 50px 0px;
+    padding: 100px 0px 330px 0px;
+
+    background-image: url('images/hero_christmas.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
 
 }
