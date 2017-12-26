@@ -1,10 +1,99 @@
 [
     {
         "id": 1,
-        "prodName": "Epiphone Les Paul Standard",
-        "prodDesc": "Elgitarr med kropp av mahogny och AAA-flammigt lönntopp, mahognyhals med greppbräda av rosewood och två ProBucker pickups.",
-        "prodPrice": 6999,
+        "prodName": "Svart Te Kanel",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_1_kanel.png",
+        "prodPrice": 99,
         "huvudKat": 1,
         "underKat": 1
+    },{
+        "id": 2,
+        "prodName": "Svart Te Ceylon",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_2_ceylon.png",
+        "prodPrice": 99,
+        "huvudKat": 1,
+        "underKat": 1
+    },{
+        "id": 3,
+        "prodName": "Svart Te Earl Grey",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_3_earlgrey.png",
+        "prodPrice": 99,
+        "huvudKat": 1,
+        "underKat": 1
+    },{
+        "id": 4,
+        "prodName": "Svart Te Pakistan",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_4_pakistan.png",
+        "prodPrice": 99,
+        "huvudKat": 1,
+        "underKat": 1
+    },{
+        "id": 5,
+        "prodName": "Svart Te Kanel",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_5_kanel.png",
+        "prodPrice": 59,
+        "huvudKat": 1,
+        "underKat": 2
+    },{
+        "id": 6,
+        "prodName": "Svart Te English Breakfast",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_6_english.png",
+        "prodPrice": 59,
+        "huvudKat": 1,
+        "underKat": 2
+    },{
+        "id": 7,
+        "prodName": "Svart Te Earl Grey",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_7_earlgrey.png",
+        "prodPrice": 59,
+        "huvudKat": 1,
+        "underKat": 2
+    },{
+        "id": 8,
+        "prodName": "Svart Te Ginseng",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_8_ginseng.png",
+        "prodPrice": 59,
+        "huvudKat": 1,
+        "underKat": 2
+    },{
+        "id": 9,
+        "prodName": "Svart Te Kanel",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_9_kanel.png",
+        "prodPrice": 49,
+        "huvudKat": 1,
+        "underKat": 3
+    },{
+        "id": 10,
+        "prodName": "Svart Te Earl Grey",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_19_earlgrey.png",
+        "prodPrice": 49,
+        "huvudKat": 1,
+        "underKat": 3
+    },{
+        "id": 11,
+        "prodName": "Svart Te English Breakfast",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_11_english.png",
+        "prodPrice": 49,
+        "huvudKat": 1,
+        "underKat": 3
+    },{
+        "id": 12,
+        "prodName": "Svart Te Ginseng",
+        "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
+        "image": "black_12_ginseng.png",
+        "prodPrice": 49,
+        "huvudKat": 1,
+        "underKat": 3
     }
 ]

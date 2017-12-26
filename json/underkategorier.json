@@ -10,7 +10,7 @@
         "huvudkategori": 1
     },{
         "id": 3,
-        "packaging": "Kapsal",
+        "packaging": "Kapslar",
         "huvudkategori": 1
     },{
         "id": 4,
@@ -22,31 +22,31 @@
         "huvudkategori": 2
     },{
         "id": 6,
-        "packaging": "Kapsal",
+        "packaging": "Kapslar",
         "huvudkategori": 2
     },{
-        "id": 8,
+        "id": 7,
         "packaging": "Lösvikt",
+        "huvudkategori": 3
+    },{
+        "id": 8,
+        "packaging": "Tepåsar",
         "huvudkategori": 3
     },{
         "id": 9,
-        "packaging": "Tepåsar",
+        "packaging": "Kapslar",
         "huvudkategori": 3
     },{
         "id": 10,
-        "packaging": "Kapsal",
-        "huvudkategori": 3
-    },{
-        "id": 11,
         "packaging": "Lösvikt",
         "huvudkategori": 4
     },{
-        "id": 12,
+        "id": 11,
         "packaging": "Tepåsar",
         "huvudkategori": 4
     },{
-        "id": 15,
-        "packaging": "Kapsal",
+        "id": 12,
+        "packaging": "Kapslar",
         "huvudkategori": 4
     }
 ]
