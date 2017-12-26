@@ -1,0 +1,15 @@
+[
+    {
+        "id": 1,
+        "teacolor": "Svart Te"
+    },{
+        "id": 2,
+        "teacolor": "Grönt Te"
+    },{
+        "id": 3,
+        "teacolor": "Vitt Te"
+    },{
+        "id": 4,
+        "teacolor": "Rött Te"
+    }
+]

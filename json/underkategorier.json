@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "packaging": "Lösvikt",
+        "huvudkategori": 1
+        
+    },{
+        "id": 2,
+        "packaging": "Tepåsar",
+        "huvudkategori": 1
+    },{
+        "id": 3,
+        "packaging": "Kapsal",
+        "huvudkategori": 1
+    },{
+        "id": 4,
+        "packaging": "Lösvikt",
+        "huvudkategori": 2
+    },{
+        "id": 5,
+        "packaging": "Tepåsar",
+        "huvudkategori": 2
+    },{
+        "id": 6,
+        "packaging": "Kapsal",
+        "huvudkategori": 2
+    },{
+        "id": 8,
+        "packaging": "Lösvikt",
+        "huvudkategori": 3
+    },{
+        "id": 9,
+        "packaging": "Tepåsar",
+        "huvudkategori": 3
+    },{
+        "id": 10,
+        "packaging": "Kapsal",
+        "huvudkategori": 3
+    },{
+        "id": 11,
+        "packaging": "Lösvikt",
+        "huvudkategori": 4
+    },{
+        "id": 12,
+        "packaging": "Tepåsar",
+        "huvudkategori": 4
+    },{
+        "id": 15,
+        "packaging": "Kapsal",
+        "huvudkategori": 4
+    }
+]
