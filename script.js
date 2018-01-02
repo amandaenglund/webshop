@@ -19,7 +19,7 @@ $(document).ready(function(){
             //console.log(huvudKatId);
             //console.log(huvudKatTea);
  
-            var printHuvudKat = '<li class="dropdown" id="hk'+ huvudKatId +'"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="underKat"></ul></li>'
+            var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
             $('#huvudKat').append(printHuvudKat);
    
 
@@ -27,17 +27,16 @@ $(document).ready(function(){
 
     
     });
-    //stängt fetchen för Huvudkategorier
 
     
-    //Tar upp informationen från JSON-filen
+    //Nästa Fetch och Foor Loop
     fetch("json/underkategorier.json")
     .then(function(response) {
         return response.json();
     })
     .then(function(data) {
         underKat = data;
-        console.log(underKat);
+        // console.log(underKat);
 
         for(i = 0; i < underKat.length; i++) {
 
@@ -47,31 +46,95 @@ $(document).ready(function(){
             var underKatHuvud = (underKat[i].huvudkategori);
 
 
-            console.log(underKatId);
-            console.log(underKatPack);
-            console.log(underKatHuvud);
+            // console.log(underKatId);
+            // console.log(underKatPack);
+            // console.log(underKatHuvud);
 
+            var underHuvudKat = '<li id="uk'+ underKatId +'"><a href="#">'+ underKatPack +'</a></li>';
 
             if (underKatHuvud == 1) {
-                $('#hk1').append('<li id='+ i +'><a href="#">'+ underKat[i].packaging +'</a></li>');
+                $('#hk1').append(underHuvudKat);
             
             } else if (underKatHuvud == 2) {
-                $('#hk2').append('<li id='+ i +'><a href="#">'+ underKat[i].packaging +'</a></li>');
+                $('#hk2').append(underHuvudKat);
             
             } else if (underKatHuvud == 3) {
-                $('#hk3').append('<li id='+ i +'><a href="#">'+ underKat[i].packaging +'</a></li>');
+                $('#hk3').append(underHuvudKat);
 
             } else {
-                $('#hk4').append('<li id='+ i +'><a href="#">'+ underKat[i].packaging +'</a></li>');
+                $('#hk4').append(underHuvudKat);
             }
-
-            
 
         };
 
     
     });
-    //stängt fetchen
+    //stängt fetchen för NavBaren
+
+
+    //Nu loopar vi ut produkterna//
+    fetch("json/produkter.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        produkter = data;
+        //console.log(huvudKat);
+
+        for(i = 0; i < produkter.length; i++) {
+
+            var produktId = (produkter[i].id);
+            var produktName = (produkter[i].prodName);
+            var produktDesc = (produkter[i].prodDesc);
+            var produktImage = "images/" + produkter.image;
+            var produktPrice = (produkter[i].prodPrice);
+            var produktHK = (produkter[i].huvudKat);
+            var produktUK = (produkter[i].underKat);
+
+            console.log(produktId);
+            console.log(produktName);
+            console.log(produktDesc);
+            console.log(produktImage);
+            console.log(produktPrice);
+            console.log(produktHK);
+            console.log(produktUK);
+
+            //$('#allProducts').append(produktId);
+            $('.card-img-top').append(produktImage);
+            $('.card-title').append(produktName);
+            $('.card-text').append(produktDesc);
+            
+
+            //var createProduktCard = 
+
+            // var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
+            // $('#huvudKat').append(printHuvudKat);
+   
+
+        };
+
+    
+    });
+
+
+
+
+    /////////////////LITE KNAPPAR OCH SÅ//////////
+
+//TEST
+    $('#uk1').click(function(){
+        console.log("klick uk1");
+        //window.location = "http://amandaenglund.wieg17.se"
+      });
+//SLUT TEST
+
+    $('#login').click(function() {
+        alert("Logga in nu");  
+    });
+
+    $('#signup').click(function() {
+        alert("Signa upp nu");  
+    });
 
 
 
