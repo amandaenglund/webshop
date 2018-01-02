@@ -1,52 +1,52 @@
 [
     {
         "id": 1,
-        "packaging": "Lösvikt",
+        "packaging": "Lösvikt 1",
         "huvudkategori": 1
         
     },{
         "id": 2,
-        "packaging": "Tepåsar",
+        "packaging": "Tepåsar 1",
         "huvudkategori": 1
     },{
         "id": 3,
-        "packaging": "Kapslar",
+        "packaging": "Kapslar 1",
         "huvudkategori": 1
     },{
         "id": 4,
-        "packaging": "Lösvikt",
+        "packaging": "Lösvikt 2",
         "huvudkategori": 2
     },{
         "id": 5,
-        "packaging": "Tepåsar",
+        "packaging": "Tepåsar 2",
         "huvudkategori": 2
     },{
         "id": 6,
-        "packaging": "Kapslar",
+        "packaging": "Kapslar 2",
         "huvudkategori": 2
     },{
         "id": 7,
-        "packaging": "Lösvikt",
+        "packaging": "Lösvikt 3",
         "huvudkategori": 3
     },{
         "id": 8,
-        "packaging": "Tepåsar",
+        "packaging": "Tepåsar 3",
         "huvudkategori": 3
     },{
         "id": 9,
-        "packaging": "Kapslar",
+        "packaging": "Kapslar 3",
         "huvudkategori": 3
     },{
         "id": 10,
-        "packaging": "Lösvikt",
+        "packaging": "Lösvikt 4",
         "huvudkategori": 4
     },{
         "id": 11,
-        "packaging": "Tepåsar",
+        "packaging": "Tepåsar 4",
         "huvudkategori": 4
     },{
         "id": 12,
-        "packaging": "Kapslar",
+        "packaging": "Kapslar 4",
         "huvudkategori": 4
     }
 ]
