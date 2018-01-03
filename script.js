@@ -90,15 +90,8 @@ $(document).ready(function(){
             var produktUK = (produkter[i].underKat);
             var produktCard = "";
 
-            // console.log(produktId);
-            // console.log(produktName);
-            // console.log(produktDesc);
-            // console.log(produktImage);
-            // console.log(produktPrice);
-            // console.log(produktHK);
-            // console.log(produktUK);
-
-            var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-block"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
+            //var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
+            var produktCard = '<div class="col-sm-4"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div></div>';
             console.log(produktCard);
             $('#allProducts').append(produktCard);
 
