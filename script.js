@@ -1,10 +1,39 @@
 $(document).ready(function(){ 
 
     var user = "test"
-    var password = "password"
+    var password = "123"
     var huvudKat = "";
 
-    visaVidStart();
+            
+    if (sessionStorage.ourUser != null) {
+            
+        // Är vi inloggade
+        visaVidInlogg();
+        
+
+    } else {
+
+        //om vi inte är inloggade
+        visaVidStart();
+        
+    }
+
+    //login-knappen
+    $("#loggaInKnapp").click(function(){
+      
+        if ( $(".usrname").val() == user && $(".psw").val() == password ) {
+            // om rätt svar - visa välkommen-sida
+            //visaWelcome();
+            console.log("välkommen!");
+
+        } else {
+            // om fel svar - visa forgot-sida
+            //visaForgot();
+            console.log("fel lösenord!");
+        }
+
+    });
+    
 
     //Tar upp informationen från JSON-filen
     fetch("json/huvudkategorier.json")
@@ -85,6 +114,8 @@ $(document).ready(function(){
 
         for(i = 0; i < produkter.length; i++) {
 
+
+
             var produktId = (produkter[i].id);
             var produktName = (produkter[i].prodName);
             var produktDesc = (produkter[i].prodDesc);
@@ -96,8 +127,10 @@ $(document).ready(function(){
 
             //var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
             var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
-            console.log(produktCard);
+            //console.log(produktCard);
             $('#allProducts').append(produktCard);
+
+
 
         };
 
@@ -111,10 +144,26 @@ $(document).ready(function(){
     });
 
     //LITE FUNTIONER
-    //syns vid start
+    //syns vid start utloggad
     function visaVidStart() {
         $("#login").show();     
         $("#logout").hide(); 
+    };
+
+
+    //syns vid start inloggad
+    function visaVidInlogg() {
+        $("#login").hide();     
+        $("#logout").show(); 
+    };
+
+    //visar member-sidan
+    function visaWelcome() {
+        $("#login").hide();     
+        $("#logout").show(); 
+
+        $("#namn").text($(".user").val());
+        sessionStorage.ourUser = $(".user").val();                   
     };
 
 
