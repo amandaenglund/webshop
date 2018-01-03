@@ -21,7 +21,6 @@ $(document).ready(function(){
  
             var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
             $('#huvudKat').append(printHuvudKat);
-   
 
         };
 
@@ -79,37 +78,29 @@ $(document).ready(function(){
     })
     .then(function(data) {
         produkter = data;
-        //console.log(huvudKat);
 
         for(i = 0; i < produkter.length; i++) {
 
             var produktId = (produkter[i].id);
             var produktName = (produkter[i].prodName);
             var produktDesc = (produkter[i].prodDesc);
-            var produktImage = "images/" + produkter.image;
+            var produktImage = "images/" + (produkter[i].image);
             var produktPrice = (produkter[i].prodPrice);
             var produktHK = (produkter[i].huvudKat);
             var produktUK = (produkter[i].underKat);
+            var produktCard = "";
 
-            console.log(produktId);
-            console.log(produktName);
-            console.log(produktDesc);
-            console.log(produktImage);
-            console.log(produktPrice);
-            console.log(produktHK);
-            console.log(produktUK);
+            // console.log(produktId);
+            // console.log(produktName);
+            // console.log(produktDesc);
+            // console.log(produktImage);
+            // console.log(produktPrice);
+            // console.log(produktHK);
+            // console.log(produktUK);
 
-            //$('#allProducts').append(produktId);
-            $('.card-img-top').append(produktImage);
-            $('.card-title').append(produktName);
-            $('.card-text').append(produktDesc);
-            
-
-            //var createProduktCard = 
-
-            // var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
-            // $('#huvudKat').append(printHuvudKat);
-   
+            var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-block"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
+            console.log(produktCard);
+            $('#allProducts').append(produktCard);
 
         };
 
