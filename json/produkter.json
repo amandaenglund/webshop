@@ -75,7 +75,7 @@
         "id": 10,
         "prodName": "Svart Te Earl Grey",
         "prodDesc": "Svart te är en kategori av oxiderade teer. Det är den internationellt sett vanligaste typen och helt dominerande på världsmarknaden. I Kina, där svarta teer först framställdes, kallas de här teerna efter dryckens färg röda.",
-        "image": "black_19_earlgrey.png",
+        "image": "black_10_earlgrey.png",
         "prodPrice": 49,
         "huvudKat": 1,
         "underKat": 3
@@ -94,6 +94,198 @@
         "image": "black_12_ginseng.png",
         "prodPrice": 49,
         "huvudKat": 1,
+        "underKat": 3
+    },{
+        "id": 13,
+        "prodName": "Grönt Te Gunpowder",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_1_gunpowder.png",
+        "prodPrice": 99,
+        "huvudKat": 2,
+        "underKat": 1
+    },{
+        "id": 14,
+        "prodName": "Grönt Te Mint",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_2_mint.png",
+        "prodPrice": 99,
+        "huvudKat": 2,
+        "underKat": 1
+    },{
+        "id": 15,
+        "prodName": "Grönt Te Moruno",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_3_moruno.png",
+        "prodPrice": 99,
+        "huvudKat": 2,
+        "underKat": 1
+    },{
+        "id": 16,
+        "prodName": "Grönt Te Chai",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_4_chai.png",
+        "prodPrice": 99,
+        "huvudKat": 2,
+        "underKat": 1
+    },{
+        "id": 17,
+        "prodName": "Grönt Te Mediterraneo",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_5_mediterraneo.png",
+        "prodPrice": 59,
+        "huvudKat": 2,
+        "underKat": 2
+    },{
+        "id": 18,
+        "prodName": "Grönt Te Chai",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_6_chai.png",
+        "prodPrice": 59,
+        "huvudKat": 2,
+        "underKat": 2
+    },{
+        "id": 19,
+        "prodName": "Grönt Te Mint",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_7_mint.png",
+        "prodPrice": 59,
+        "huvudKat": 2,
+        "underKat": 2
+    },{
+        "id": 20,
+        "prodName": "Grönt Te Moruno",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_8_moruno.png",
+        "prodPrice": 59,
+        "huvudKat": 2,
+        "underKat": 2
+    },{
+        "id": 21,
+        "prodName": "Grönt Te Moruno",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_9_moruno.png",
+        "prodPrice": 49,
+        "huvudKat": 2,
+        "underKat": 3
+    },{
+        "id": 22,
+        "prodName": "Grönt Te Chai",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_10_chai.png",
+        "prodPrice": 49,
+        "huvudKat": 2,
+        "underKat": 3
+    },{
+        "id": 23,
+        "prodName": "Grönt Te Mint",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_11_mint.png",
+        "prodPrice": 49,
+        "huvudKat": 2,
+        "underKat": 3
+    },{
+        "id": 24,
+        "prodName": "Grönt Te Mediterraneo",
+        "prodDesc": "När tebladen inte tillåts oxidera tillverkas grönt te, vilket medför att teet får en mer vegetabilisk smak som kan föra tankarna till hö, gräs, alger och hav. Därför kan grönt te kräva lite mer tillvänjning än det mer lättillgängliga svarta teet.",
+        "image": "green_12_mediterraneo.png",
+        "prodPrice": 49,
+        "huvudKat": 2,
+        "underKat": 3
+},{
+        "id": 31,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_1_mango.png",
+        "prodPrice": 99,
+        "huvudKat": 4,
+        "underKat": 1
+    },{
+        "id": 32,
+        "prodName": "Rött Te Pu",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_2_pu.png",
+        "prodPrice": 99,
+        "huvudKat": 4,
+        "underKat": 1
+    },{
+        "id": 33,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_5_mango.png",
+        "prodPrice": 59,
+        "huvudKat": 4,
+        "underKat": 2
+    },{
+        "id": 34,
+        "prodName": "Rött Te Pu",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_6_pu.png",
+        "prodPrice": 59,
+        "huvudKat": 4,
+        "underKat": 2
+    },{
+        "id": 35,
+        "prodName": "Rött Te Pue",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_10_mango.png",
+        "prodPrice": 49,
+        "huvudKat": 4,
+        "underKat": 3
+    },{
+        "id": 36,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_11_pu.png",
+        "prodPrice": 49,
+        "huvudKat": 4,
+        "underKat": 3    
+    },{
+        "id": 25,
+        "prodName": "Vitt Te Mandarin",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_1_mandarin.png",
+        "prodPrice": 99,
+        "huvudKat": 3,
+        "underKat": 1
+    },{
+        "id": 26,
+        "prodName": "Vitt Te Vanilj",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_2_vanilj.png",
+        "prodPrice": 99,
+        "huvudKat": 3,
+        "underKat": 1
+    },{
+        "id": 27,
+        "prodName": "Vitt Te Pai",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_5_pai.png",
+        "prodPrice": 59,
+        "huvudKat": 3,
+        "underKat": 2
+    },{
+        "id": 28,
+        "prodName": "Vitt Te Vanilj",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_6_vanilj.png",
+        "prodPrice": 59,
+        "huvudKat": 3,
+        "underKat": 2
+    },{
+        "id": 29,
+        "prodName": "Vitt Te Vanilj",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_9_vanilj.png",
+        "prodPrice": 49,
+        "huvudKat": 3,
+        "underKat": 3
+    },{
+        "id": 30,
+        "prodName": "Vitt Te Mandarin",
+        "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
+        "image": "white_10_mandarin.png",
+        "prodPrice": 49,
+        "huvudKat": 3,
         "underKat": 3
     }
 ]
