@@ -1,7 +1,8 @@
 $(document).ready(function(){ 
 
+    var user = "test"
+    var password = "password"
     var huvudKat = "";
-
 
     visaVidStart();
 
@@ -94,7 +95,7 @@ $(document).ready(function(){
             var produktCard = "";
 
             //var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
-            var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div></div></div>';
+            var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
             console.log(produktCard);
             $('#allProducts').append(produktCard);
 
@@ -104,7 +105,10 @@ $(document).ready(function(){
     });
 
 
-
+    //logout-knappen
+    $("#logout").click(function(){
+        visaVidStart();        
+    });
 
     //LITE FUNTIONER
     //syns vid start

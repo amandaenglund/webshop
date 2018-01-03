@@ -4,7 +4,7 @@ body {
 
 }
 
-.modal-header, h4, .close {
+.modal-header, .modal-header h4, .close {
     background-color: #5cb85c;
     color:white !important;
     text-align: center;
@@ -44,3 +44,24 @@ body {
 .card {
     margin: 15px;
 }
+
+
+
+
+
+@media (max-width:768px) {
+    .main {
+        margin-top:0;
+    }
+    .navbar-fixed-top {
+        position:static;
+    }
+
+
+    .jumbotron {
+        margin: 0px;
+        padding: 0px 0px 150px 0px;
+    
+    
+    }
+} 
