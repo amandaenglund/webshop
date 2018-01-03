@@ -2,6 +2,9 @@ $(document).ready(function(){
 
     var huvudKat = "";
 
+
+    visaVidStart();
+
     //Tar upp informationen från JSON-filen
     fetch("json/huvudkategorier.json")
     .then(function(response) {
@@ -91,7 +94,7 @@ $(document).ready(function(){
             var produktCard = "";
 
             //var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
-            var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer"><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div></div></div>';
+            var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div></div></div>';
             console.log(produktCard);
             $('#allProducts').append(produktCard);
 
@@ -103,6 +106,14 @@ $(document).ready(function(){
 
 
 
+    //LITE FUNTIONER
+    //syns vid start
+    function visaVidStart() {
+        $("#login").show();     
+        $("#logout").hide(); 
+    };
+
+
     /////////////////LITE KNAPPAR OCH SÅ//////////
 
 //TEST
@@ -112,9 +123,6 @@ $(document).ready(function(){
       });
 //SLUT TEST
 
-    $('#login').click(function() {
-        alert("Logga in nu");  
-    });
 
     $('#signup').click(function() {
         alert("Signa upp nu");  

@@ -4,9 +4,19 @@ body {
 
 }
 
+.modal-header, h4, .close {
+    background-color: #5cb85c;
+    color:white !important;
+    text-align: center;
+    font-size: 26px;
+}
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
 .navbar {
     padding: 20px 5px;
-    color: rgb(255, 0, 153);
+    color: rgb(250, 69, 178);
     background-color: rgb(244, 240, 240);
 
     letter-spacing: 2px;
@@ -14,6 +24,11 @@ body {
 
 .navbar a {
     color: rgb(255, 0, 153);
+}
+
+.btn-link {
+    letter-spacing: 2px;
+    font-size: 1em;
 }
 
 .jumbotron {
