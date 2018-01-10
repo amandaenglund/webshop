@@ -3,7 +3,7 @@ $(document).ready(function(){
     var user = "test"
     var password = "123"
     var huvudKat = "";
-
+    var produktCard = "";
     
             
     if (sessionStorage.ourUser != null) {
@@ -14,7 +14,6 @@ $(document).ready(function(){
         visaSomInloggad();
     }
     
-
     
     //Fetchar JSON-filen huvudkategorier
     fetch("json/huvudkategorier.json")
@@ -23,10 +22,8 @@ $(document).ready(function(){
     })
     .then(function(data) {
         huvudKat = data;
-        //console.log(huvudKat);
 
         printaHuvudKat();
-    
     });
 
     
@@ -37,11 +34,9 @@ $(document).ready(function(){
     })
     .then(function(data) {
         underKat = data;
-        // console.log(underKat);
+        
         printaUnderKat();
-    
     });
-    //stängt fetchen för NavBaren
 
 
     //Fetchar JSON-filen med alla produkter
@@ -53,12 +48,11 @@ $(document).ready(function(){
         produkter = data;
 
         printaAllaProdukter();
-
     });
     
 
 
-    //LITE FUNTIONER
+    ///////LITE FUNTIONER////////
 
     //syns vid start utloggad
     function visaFirstVisit() {
@@ -67,6 +61,9 @@ $(document).ready(function(){
         $(".namn").hide(); 
         $("#username").show();
         $("#pass").show();
+
+        sessionStorage.clear()
+        location.reload(); 
     };
 
 
@@ -92,7 +89,7 @@ $(document).ready(function(){
             var huvudKatTea = (huvudKat[i].teacolor);
             var printHuvudKat = "";
 
-            var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
+            var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick= "visaVissaProdukter(' + [i] + ')">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
             $('#huvudKat').append(printHuvudKat);
 
         };
@@ -106,7 +103,7 @@ $(document).ready(function(){
             var underKatPack = (underKat[i].packaging);
             var underKatHuvud = (underKat[i].huvudkategori);
 
-            var underHuvudKat = '<li id="uk'+ underKatId +'"><a href="#">'+ underKatPack +'</a></li>';
+            var underHuvudKat = '<li id="uk'+ underKatId +'" onclick="visaVissaProdukter('+ underKatId +')"><a href="#">'+ underKatPack +'</a></li>';
 
             if (underKatHuvud == 1) {
                 $('#hk1').append(underHuvudKat);
@@ -126,6 +123,7 @@ $(document).ready(function(){
 
     //Appendar ut alla produkter på första-sidan
     function printaAllaProdukter() {
+        
         for(i = 0; i < produkter.length; i++) {
 
             var produktId = (produkter[i].id);
@@ -136,13 +134,33 @@ $(document).ready(function(){
             var produktHK = (produkter[i].huvudKat);
             var produktUK = (produkter[i].underKat);
             var produktCard = "";
+            
 
-            //var produktCard = '<div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><a href="#" class="btn btn-primary">Köp nu</a></div></div>';
             var produktCard = '<div class="col-sm-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
-            //console.log(produktCard);
-            $('#allProducts').append(produktCard);
+            $('.allProducts').append(produktCard);
+            
 
         };
+    };
+
+
+    //INGEN ANING OM DETTA FUNKAR
+    //Visar produkter på respektive sida
+    visaVissaProdukter = function(i){
+
+        console.log("nu ska jag klicka mig vidare till specifika produkter");
+
+        // $(".allProducts").html("");
+
+        // if (produkter[i].huvudKat == i+1) {
+        //     $(".allProducts").append(produktCard);
+            
+        // } 
+        // else if(produkter[i].underKat == i){
+        //     $(".allProducts").append(produktCard);
+            
+        // }
+        
     };
 
 
@@ -163,8 +181,6 @@ $(document).ready(function(){
             visaSomInloggad();
 
         } else {
-            // om fel svar - visa forgot-sida
-            //visaForgot();
             console.log("fel lösenord!");
             alert("Fel lösenord, var god försök igen!");
         }
@@ -182,14 +198,14 @@ $(document).ready(function(){
     //Skapa konto
     $('#signup').click(function() {
         console.log("Signa upp nu");
-        $(".container").html("");
+        //$(".container").html("");
     });
 
 
     //Kundvagn
     $('#shoppingCart').click(function() {
         console.log("Nu hamna vi i kundvagnen :)");
-        $(".container").html("");
+        //$(".container").html("");
     });
 
     
