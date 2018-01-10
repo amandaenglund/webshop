@@ -15,7 +15,6 @@
 </head>
  
 <body>
-    <div id="namn">Välkommen </div>
     <!--Här börjar navbaren-->
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
@@ -56,14 +55,14 @@
           <h4><span class="glyphicon glyphicon-lock"></span> Logga in för att komma åt ditt konto</h4>
         </div>
         <div class="modal-body" style="padding:40px 50px;">
-          <form role="form">
+          <form role="form" id="loginform">
             <div class="form-group">
-              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Användarnamn</label>
-              <input type="text" class="form-control" id="usrname" placeholder="E-post">
+              <label for="username"><span class="glyphicon glyphicon-user"></span> Användarnamn</label>
+              <input type="text" class="form-control" id="username" placeholder="E-post">
             </div>
             <div class="form-group">
-              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Lösenord</label>
-              <input type="text" class="form-control" id="psw" placeholder="Lösenord">
+              <label for="pass"><span class="glyphicon glyphicon-eye-open"></span> Lösenord</label>
+              <input type="text" class="form-control" id="pass" placeholder="Lösenord">
             </div>
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Kom ihåg mig</label>
@@ -84,6 +83,8 @@
     <div class="container">
         <!--Här börjar jumbotronen-->
         <div class="jumbotron"></div>
+
+        <div class="namn">Välkommen </div>
 
         <div class="row" id="allProducts">
         <!--Här börjar korten, info hämtas från Json-->

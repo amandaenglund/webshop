@@ -4,32 +4,46 @@ $(document).ready(function(){
     var password = "123"
     var huvudKat = "";
 
+    
             
     if (sessionStorage.ourUser != null) {
             
-        // Är vi inloggade
-        visaVidInlogg();
+        // Är vi inte inloggade
+        visaFirstVisit();
         
 
     } else {
 
-        //om vi inte är inloggade
-        visaVidStart();
-        
+        //om vi är inloggade
+        visaSomInloggad();
+
     }
 
     //login-knappen
-    $("#loggaInKnapp").click(function(){
+    $("#loggaInKnapp").click(function(event){
+
+        //fixar så att form inte laddar om när man trycker på knappen
+        event.preventDefault();
       
-        if ( $(".usrname").val() == user && $(".psw").val() == password ) {
+        if ( $("#username").val() == user && $("#pass").val() == password ) {
             // om rätt svar - visa välkommen-sida
             //visaWelcome();
             console.log("välkommen!");
+            
+            // $('#loginform').submit(function() {
+            //     $('#loginModal').modal('hide');
+            //     return false;
+            // });
+
+            visaSomInloggad();
+
+            $('#loginModal').modal('hide');
 
         } else {
             // om fel svar - visa forgot-sida
             //visaForgot();
             console.log("fel lösenord!");
+            alert("fel lösenord");
         }
 
     });
@@ -104,7 +118,7 @@ $(document).ready(function(){
     //stängt fetchen för NavBaren
 
 
-    //Nu loopar vi ut produkterna//
+    //Nu loopar vi ut produkterna på förstasidan//
     fetch("json/produkter.json")
     .then(function(response) {
         return response.json();
@@ -140,30 +154,28 @@ $(document).ready(function(){
 
     //logout-knappen
     $("#logout").click(function(){
-        visaVidStart();        
+        visaFirstVisit();        
     });
 
     //LITE FUNTIONER
+
     //syns vid start utloggad
-    function visaVidStart() {
-        $("#login").show();     
-        $("#logout").hide(); 
+    function visaFirstVisit() {
+        $(".login").show();     
+        $(".logout").hide(); 
+        $(".namn").hide(); 
     };
 
 
     //syns vid start inloggad
-    function visaVidInlogg() {
-        $("#login").hide();     
-        $("#logout").show(); 
-    };
+    function visaSomInloggad() {
+        $(".login").hide();     
+        $(".logout").show(); 
 
-    //visar member-sidan
-    function visaWelcome() {
-        $("#login").hide();     
-        $("#logout").show(); 
-
-        $("#namn").text($(".user").val());
+        $(".namn").show(); 
+        $(".namn").text($(".user").val());
         sessionStorage.ourUser = $(".user").val();                   
+
     };
 
 
