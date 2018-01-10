@@ -20,30 +20,23 @@ $(document).ready(function(){
     }
 
     //login-knappen
-    $("#loggaInKnapp").click(function(event){
+    $("#login").click(function(event){
 
         //fixar så att form inte laddar om när man trycker på knappen
         event.preventDefault();
       
         if ( $("#username").val() == user && $("#pass").val() == password ) {
-            // om rätt svar - visa välkommen-sida
-            //visaWelcome();
+
             console.log("välkommen!");
-            
-            // $('#loginform').submit(function() {
-            //     $('#loginModal').modal('hide');
-            //     return false;
-            // });
 
             visaSomInloggad();
 
-            $('#loginModal').modal('hide');
 
         } else {
             // om fel svar - visa forgot-sida
             //visaForgot();
             console.log("fel lösenord!");
-            alert("fel lösenord");
+            alert("Fel lösenord, var god försök igen!");
         }
 
     });
@@ -161,21 +154,27 @@ $(document).ready(function(){
 
     //syns vid start utloggad
     function visaFirstVisit() {
-        $(".login").show();     
-        $(".logout").hide(); 
+        $("#login").show();     
+        $("#logout").hide(); 
         $(".namn").hide(); 
+        $("#username").show();
+        $("#pass").show();
     };
 
 
-    //syns vid start inloggad
+    //syns på start när man är inloggad
     function visaSomInloggad() {
-        $(".login").hide();     
-        $(".logout").show(); 
+        $("#login").hide();     
+        $("#logout").show(); 
+        $("#username").hide();
+        $("#pass").hide();
+        
 
+        //Sparar användarens namn i sessionStorage
+        sessionStorage.setItem("userId", $(".username").val() );
+        //Välkommen meddelande med rätt namn
         $(".namn").show(); 
-        $(".namn").text($(".user").val());
-        sessionStorage.ourUser = $(".user").val();                   
-
+        $(".namn").append(sessionStorage.getItem("userId"));                 
     };
 
 
