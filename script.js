@@ -7,41 +7,15 @@ $(document).ready(function(){
     
             
     if (sessionStorage.ourUser != null) {
-            
         // Är vi inte inloggade
         visaFirstVisit();
-        
-
     } else {
-
         //om vi är inloggade
         visaSomInloggad();
-
     }
-
-    //login-knappen
-    $("#login").click(function(event){
-
-        //fixar så att form inte laddar om när man trycker på knappen
-        event.preventDefault();
-      
-        if ( $("#username").val() == user && $("#pass").val() == password ) {
-
-            console.log("välkommen!");
-
-            visaSomInloggad();
-
-
-        } else {
-            // om fel svar - visa forgot-sida
-            //visaForgot();
-            console.log("fel lösenord!");
-            alert("Fel lösenord, var god försök igen!");
-        }
-
-    });
     
 
+    
     //Tar upp informationen från JSON-filen
     fetch("json/huvudkategorier.json")
     .then(function(response) {
@@ -137,20 +111,15 @@ $(document).ready(function(){
             //console.log(produktCard);
             $('#allProducts').append(produktCard);
 
-
-
         };
 
     
     });
+    
 
-
-    //logout-knappen
-    $("#logout").click(function(){
-        visaFirstVisit();        
-    });
 
     //LITE FUNTIONER
+
 
     //syns vid start utloggad
     function visaFirstVisit() {
@@ -159,6 +128,9 @@ $(document).ready(function(){
         $(".namn").hide(); 
         $("#username").show();
         $("#pass").show();
+
+
+
     };
 
 
@@ -180,17 +152,50 @@ $(document).ready(function(){
 
     /////////////////LITE KNAPPAR OCH SÅ//////////
 
-//TEST
-    $('#uk1').click(function(){
-        console.log("klick uk1");
-        //window.location = "http://amandaenglund.wieg17.se"
-      });
-//SLUT TEST
-
-
-    $('#signup').click(function() {
-        alert("Signa upp nu");  
+    //Loggan
+    $('#logga').click(function() {
+        console.log("du är på start");
+        location.reload();
     });
+
+    //Login-knappen
+    $("#login").click(function(){
+    
+        if ( $("#username").val() == user && $("#pass").val() == password ) {
+            console.log("välkommen!");
+            visaSomInloggad();
+
+        } else {
+            // om fel svar - visa forgot-sida
+            //visaForgot();
+            console.log("fel lösenord!");
+            alert("Fel lösenord, var god försök igen!");
+        }
+    });
+
+    //Logout-knappen
+    $("#logout").click(function(){
+        console.log("du är utloggad");
+        sessionStorage.clear()
+        location.reload();      
+        visaFirstVisit();  
+    });
+
+
+    //Skapa konto
+    $('#signup').click(function() {
+        console.log("Signa upp nu");
+        $(".container").html("");
+    });
+
+
+    //Kundvagn
+    $('#shoppingCart').click(function() {
+        console.log("Nu hamna vi i kundvagnen :)");
+        $(".container").html("");
+    });
+
+    
 
 
 
