@@ -16,7 +16,7 @@ $(document).ready(function(){
     
 
     
-    //Tar upp informationen från JSON-filen
+    //Fetchar JSON-filen huvudkategorier
     fetch("json/huvudkategorier.json")
     .then(function(response) {
         return response.json();
@@ -25,24 +25,12 @@ $(document).ready(function(){
         huvudKat = data;
         //console.log(huvudKat);
 
-        for(i = 0; i < huvudKat.length; i++) {
-
-            var huvudKatId = (huvudKat[i].id);
-            var huvudKatTea = (huvudKat[i].teacolor);
-            var printHuvudKat = "";
-            //console.log(huvudKatId);
-            //console.log(huvudKatTea);
- 
-            var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
-            $('#huvudKat').append(printHuvudKat);
-
-        };
-
+        printaHuvudKat();
     
     });
 
     
-    //Nästa Fetch och Foor Loop
+    //Fetchar JSON-filen underkategorier
     fetch("json/underkategorier.json")
     .then(function(response) {
         return response.json();
@@ -50,18 +38,73 @@ $(document).ready(function(){
     .then(function(data) {
         underKat = data;
         // console.log(underKat);
+        printaUnderKat();
+    
+    });
+    //stängt fetchen för NavBaren
 
+
+    //Fetchar JSON-filen med alla produkter
+    fetch("json/produkter.json")
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        produkter = data;
+
+        printaAllaProdukter();
+
+    });
+    
+
+
+    //LITE FUNTIONER
+
+    //syns vid start utloggad
+    function visaFirstVisit() {
+        $("#login").show();     
+        $("#logout").hide(); 
+        $(".namn").hide(); 
+        $("#username").show();
+        $("#pass").show();
+    };
+
+
+    //syns på start när man är inloggad
+    function visaSomInloggad() {
+        $("#login").hide();     
+        $("#logout").show(); 
+        $("#username").hide();
+        $("#pass").hide();
+        
+        //Sparar användarens namn i sessionStorage
+        sessionStorage.setItem("userId", $(".username").val() );
+        //Välkommen meddelande med rätt namn
+        $(".namn").show(); 
+        $(".namn").append(sessionStorage.getItem("userId"));                 
+    };
+
+    //Appendar ut Huvudkategorierna i NavBaren
+    function printaHuvudKat() {
+        for(i = 0; i < huvudKat.length; i++) {
+
+            var huvudKatId = (huvudKat[i].id);
+            var huvudKatTea = (huvudKat[i].teacolor);
+            var printHuvudKat = "";
+
+            var printHuvudKat = '<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">'+ huvudKat[i].teacolor +'<span class="caret"></span></a><ul class="dropdown-menu" id="hk'+ huvudKatId +'"></ul></li>';
+            $('#huvudKat').append(printHuvudKat);
+
+        };
+    };
+
+    //Appendar ut Underkategorierna i NavBaren
+    function printaUnderKat() {
         for(i = 0; i < underKat.length; i++) {
-
 
             var underKatId = (underKat[i].id);
             var underKatPack = (underKat[i].packaging);
             var underKatHuvud = (underKat[i].huvudkategori);
-
-
-            // console.log(underKatId);
-            // console.log(underKatPack);
-            // console.log(underKatHuvud);
 
             var underHuvudKat = '<li id="uk'+ underKatId +'"><a href="#">'+ underKatPack +'</a></li>';
 
@@ -79,23 +122,11 @@ $(document).ready(function(){
             }
 
         };
+    };
 
-    
-    });
-    //stängt fetchen för NavBaren
-
-
-    //Nu loopar vi ut produkterna på förstasidan//
-    fetch("json/produkter.json")
-    .then(function(response) {
-        return response.json();
-    })
-    .then(function(data) {
-        produkter = data;
-
+    //Appendar ut alla produkter på första-sidan
+    function printaAllaProdukter() {
         for(i = 0; i < produkter.length; i++) {
-
-
 
             var produktId = (produkter[i].id);
             var produktName = (produkter[i].prodName);
@@ -112,42 +143,8 @@ $(document).ready(function(){
             $('#allProducts').append(produktCard);
 
         };
-
-    
-    });
-    
-
-
-    //LITE FUNTIONER
-
-
-    //syns vid start utloggad
-    function visaFirstVisit() {
-        $("#login").show();     
-        $("#logout").hide(); 
-        $(".namn").hide(); 
-        $("#username").show();
-        $("#pass").show();
-
-
-
     };
 
-
-    //syns på start när man är inloggad
-    function visaSomInloggad() {
-        $("#login").hide();     
-        $("#logout").show(); 
-        $("#username").hide();
-        $("#pass").hide();
-        
-
-        //Sparar användarens namn i sessionStorage
-        sessionStorage.setItem("userId", $(".username").val() );
-        //Välkommen meddelande med rätt namn
-        $(".namn").show(); 
-        $(".namn").append(sessionStorage.getItem("userId"));                 
-    };
 
 
     /////////////////LITE KNAPPAR OCH SÅ//////////
@@ -198,5 +195,5 @@ $(document).ready(function(){
     
 
 
-
+//stänger allt
 });
