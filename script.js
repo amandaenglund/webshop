@@ -49,7 +49,7 @@ $(document).ready(function(){
     .then(function(data) {
         produkter = data;
 
-        printaAllaProdukter();
+        visaAllaProdukter();
     });
     
 
@@ -123,7 +123,7 @@ $(document).ready(function(){
     };
 
     //Appendar ut alla produkter på första-sidan
-    function printaAllaProdukter() {
+    function visaAllaProdukter() {
 
         
         
@@ -141,7 +141,7 @@ $(document).ready(function(){
             
             
 
-            var produktCard = '<div class="col-lg-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
+            var produktCard = '<div class="col-lg-3"><div class="card" onclick="visaEnProdukt('+ produktId +')"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><div class="card-footer "><p>Pris: ' + produktPrice + '</p></div></div></div></div>';
             $('.allProducts').append(produktCard);
             
             
@@ -159,10 +159,7 @@ $(document).ready(function(){
         $(".allProducts").empty();
 
         var value = val + 1;
-        
-
-        console.log("nu ska jag klicka mig vidare till alla HuvudKategori-produkter", val);
-        
+                
 
         for(i = 0; i < produkter.length; i++) {
 
@@ -175,14 +172,11 @@ $(document).ready(function(){
             var produktUK = (produkter[i].underKat);
             var produktCard = "";
 
-            var produktCard = '<div class="col-lg-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
+            var produktCard = '<div class="col-lg-3"><div class="card" onclick="visaEnProdukt('+ produktId +')"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><div class="card-footer "><p>Pris: ' + produktPrice + '</p></div></div></div></div>';
 
             
             // Skriv en IF sats som kollar att det bara skrivs ut rätt produkter
             if ( produktHK == value) {
-                console.log(value);
-                console.log(produktHK);
-                console.log("Skriver ut vissa produkter");
             
             //$('.allProducts').html(" ");
             $('.allProducts').append(produktCard);
@@ -199,8 +193,6 @@ $(document).ready(function(){
         var value = val;
         
 
-        console.log("nu ska jag klicka mig vidare till alla UnderKategori-produkter", val);
-
         for(i = 0; i < produkter.length; i++) {
 
             var produktId = (produkter[i].id);
@@ -212,20 +204,57 @@ $(document).ready(function(){
             var produktUK = (produkter[i].underKat);
             var produktCard = "";
 
-            var produktCard = '<div class="col-lg-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
+            var produktCard = '<div class="col-lg-3"><div class="card" onclick="visaEnProdukt('+ produktId +')"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><div class="card-footer "><p>Pris: ' + produktPrice + '</p></div></div></div></div>';
 
             
             // Skriv en IF sats som kollar att det bara skrivs ut rätt produkter
             if ( produktUK == value) {
-                console.log(value);
-                console.log(produktUK);
-                console.log("Skriver ut vissa produkter");
             
             //$('.allProducts').html(" ");
             $('.allProducts').append(produktCard);
             }
             
         };
+    };
+
+
+    visaEnProdukt = function(val){
+
+        $(".allProducts").empty();
+        console.log("visa produktinfo");
+
+        var value = val;
+        
+        for(i = 0; i < produkter.length; i++) {
+
+            var produktId = (produkter[i].id);
+            var produktName = (produkter[i].prodName);
+            var produktDesc = (produkter[i].prodDesc);
+            var produktImage = "images/" + (produkter[i].image);
+            var produktPrice = (produkter[i].prodPrice);
+            var produktHK = (produkter[i].huvudKat);
+            var produktUK = (produkter[i].underKat);
+            var produktCard = "";
+
+            var produktCard = '<div class="col-lg-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success" onclick="addToCart('+ produktId +')">Köp nu</a></div></div></div></div>';
+
+            
+            // Skriv en IF sats som kollar att det bara skrivs ut rätt produkter
+            if ( produktId == value) {
+            
+            $('.allProducts').append(produktCard);
+            }
+            
+        };
+    };
+
+    addToCart = function(val){
+
+        $(".allProducts").empty();
+        $(".allProducts").append("tillagd");
+        console.log("tillagd");
+
+
     };
 
 
@@ -262,7 +291,7 @@ $(document).ready(function(){
 
     //Skapa konto
     $('#signup').click(function() {
-        console.log("Signa upp nu");
+        alert("Signa upp nu");
         //$(".container").html("");
     });
 
