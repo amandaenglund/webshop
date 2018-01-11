@@ -196,7 +196,7 @@ $(document).ready(function(){
 
         $(".allProducts").empty();
 
-        var value = val + 1;
+        var value = val;
         
 
         console.log("nu ska jag klicka mig vidare till alla UnderKategori-produkter", val);
