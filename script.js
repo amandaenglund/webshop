@@ -155,6 +155,8 @@ $(document).ready(function(){
     //Visar produkter på respektive sida
     visaUKProdukter = function(val){
 
+        $(".allProducts").empty();
+
         var value = val + 1;
         
 
@@ -175,13 +177,12 @@ $(document).ready(function(){
 
             
             // Skriv en IF sats som kollar att det bara skrivs ut rätt produkter
-
             if ( produktUK == value) {
-                console.log(val);
+                console.log(value);
                 console.log(produktUK);
                 console.log("Skriver ut vissa produkter");
             
-            $('.allProducts').html(" ");
+            //$('.allProducts').html(" ");
             $('.allProducts').append(produktCard);
             }
             
