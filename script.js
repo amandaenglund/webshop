@@ -61,8 +61,8 @@ $(document).ready(function(){
         $("#login").show();     
         $("#logout").hide(); 
         $(".namn").hide(); 
-        $("#username").show();
-        $("#pass").show();
+        $(".username").show();
+        $(".pass").show();
 
 
     };
@@ -72,11 +72,11 @@ $(document).ready(function(){
     function visaSomInloggad() {
         $("#login").hide();     
         $("#logout").show(); 
-        $("#username").hide();
-        $("#pass").hide();
+        $(".username").hide();
+        $(".pass").hide();
         
         //Sparar användarens namn i sessionStorage
-        sessionStorage.setItem("userId", $("#username").val() );
+        sessionStorage.setItem("userId", $(".username").val() );
         //Välkommen meddelande med rätt namn
         $(".namn").show(); 
         $(".namn").append(sessionStorage.getItem("userId"));                 
@@ -241,7 +241,7 @@ $(document).ready(function(){
     //Login-knappen
     $("#login").click(function(){
     
-        if ( $("#username").val() == user && $("#pass").val() == password ) {
+        if ( $(".username").val() == user && $(".pass").val() == password ) {
             console.log("välkommen!");
             visaSomInloggad();
 
