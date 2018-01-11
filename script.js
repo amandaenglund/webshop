@@ -157,6 +157,7 @@ $(document).ready(function(){
     visaHKProdukter = function(val){
 
         $(".allProducts").empty();
+        $(".jumbotron").hide(); 
 
         var value = val + 1;
                 
@@ -179,6 +180,7 @@ $(document).ready(function(){
             if ( produktHK == value) {
             
             //$('.allProducts').html(" ");
+            
             $('.allProducts').append(produktCard);
             }
             
@@ -189,6 +191,7 @@ $(document).ready(function(){
     visaUKProdukter = function(val){
 
         $(".allProducts").empty();
+        $(".jumbotron").hide(); 
 
         var value = val;
         
@@ -221,6 +224,7 @@ $(document).ready(function(){
     visaEnProdukt = function(val){
 
         $(".allProducts").empty();
+        $(".jumbotron").hide(); 
         console.log("visa produktinfo");
 
         var value = val;
