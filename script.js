@@ -151,8 +151,47 @@ $(document).ready(function(){
     };
 
 
-    //INGEN ANING OM DETTA FUNKAR
+    
     //Visar produkter på respektive sida
+
+    visaHKProdukter = function(val){
+
+        $(".allProducts").empty();
+
+        var value = val + 1;
+        
+
+        console.log("nu ska jag klicka mig vidare till alla HuvudKategori-produkter", val);
+        
+
+        for(i = 0; i < produkter.length; i++) {
+
+            var produktId = (produkter[i].id);
+            var produktName = (produkter[i].prodName);
+            var produktDesc = (produkter[i].prodDesc);
+            var produktImage = "images/" + (produkter[i].image);
+            var produktPrice = (produkter[i].prodPrice);
+            var produktHK = (produkter[i].huvudKat);
+            var produktUK = (produkter[i].underKat);
+            var produktCard = "";
+
+            var produktCard = '<div class="col-lg-3"><div class="card"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><p class="card-text">' + produktDesc + '</p><div class="card-footer "><p>Pris: ' + produktPrice + '</p><a href="#" class="btn btn-success">Köp nu</a></div></div></div></div>';
+
+            
+            // Skriv en IF sats som kollar att det bara skrivs ut rätt produkter
+            if ( produktHK == value) {
+                console.log(value);
+                console.log(produktHK);
+                console.log("Skriver ut vissa produkter");
+            
+            //$('.allProducts').html(" ");
+            $('.allProducts').append(produktCard);
+            }
+            
+        };
+    };
+
+
     visaUKProdukter = function(val){
 
         $(".allProducts").empty();
