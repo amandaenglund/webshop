@@ -6,7 +6,7 @@ $(document).ready(function(){
     var produktCard = "";
     
             
-    if (sessionStorage.ourUser == null) {
+    if (sessionStorage.userId == null) {
         // Är vi inte inloggade
        
         visaFirstVisit();
@@ -255,7 +255,7 @@ $(document).ready(function(){
     addToCart = function(val){
 
         $(".allProducts").empty();
-        $(".allProducts").append("tillagd");
+        $(".allProducts").append("tillagd i kundvagnen");
         console.log("tillagd");
 
 
