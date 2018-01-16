@@ -141,7 +141,7 @@ $(document).ready(function(){
             
             
 
-            var produktCard = '<div class="col-lg-3"><div class="card" onclick="visaEnProdukt('+ produktId +')"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><div class="card-footer "><p>Pris: ' + produktPrice + '</p></div></div></div></div>';
+            var produktCard = '<div class="col-lg-3 col-md-4 col-sm-6"><div class="card" onclick="visaEnProdukt('+ produktId +')"><img class="card-img-top" src="' + produktImage + '"><div class="card-body"><h4 class="card-title">' + produktName + '</h4><div class="card-footer "><p>Pris: ' + produktPrice + '</p></div></div></div></div>';
             $('.allProducts').append(produktCard);
             
             
