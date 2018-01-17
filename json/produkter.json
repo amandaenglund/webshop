@@ -192,54 +192,6 @@
         "huvudKat": 2,
         "underKat": 2.3
 },{
-        "id": 31,
-        "prodName": "Rött Te Mango",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_1_mango.png",
-        "prodPrice": 99,
-        "huvudKat": 4,
-        "underKat": 4.1
-    },{
-        "id": 32,
-        "prodName": "Rött Te Pu",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_2_pu.png",
-        "prodPrice": 99,
-        "huvudKat": 4,
-        "underKat": 4.1
-    },{
-        "id": 33,
-        "prodName": "Rött Te Mango",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_5_mango.png",
-        "prodPrice": 59,
-        "huvudKat": 4,
-        "underKat": 4.2
-    },{
-        "id": 34,
-        "prodName": "Rött Te Pu",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_6_pu.png",
-        "prodPrice": 59,
-        "huvudKat": 4,
-        "underKat": 4.2
-    },{
-        "id": 35,
-        "prodName": "Rött Te Pue",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_10_mango.png",
-        "prodPrice": 49,
-        "huvudKat": 4,
-        "underKat": 4.3
-    },{
-        "id": 36,
-        "prodName": "Rött Te Mango",
-        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
-        "image": "red_11_pu.png",
-        "prodPrice": 49,
-        "huvudKat": 4,
-        "underKat": 4.3    
-    },{
         "id": 25,
         "prodName": "Vitt Te Mandarin",
         "prodDesc": "När man producerar vitt te bearbetas tebladen mycket lite och de tillåts inte att oxidera. Tebladen torkas på en relativt låg temperatur efter att de har plockats, men de hettas inte upp som grönt te och därför kan tebladen bli lätt oxiderade.",
@@ -287,5 +239,54 @@
         "prodPrice": 49,
         "huvudKat": 3,
         "underKat": 3.3
+    },{
+
+        "id": 31,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_1_mango.png",
+        "prodPrice": 99,
+        "huvudKat": 4,
+        "underKat": 4.1
+    },{
+        "id": 32,
+        "prodName": "Rött Te Pu",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_2_pu.png",
+        "prodPrice": 99,
+        "huvudKat": 4,
+        "underKat": 4.1
+    },{
+        "id": 33,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_5_mango.png",
+        "prodPrice": 59,
+        "huvudKat": 4,
+        "underKat": 4.2
+    },{
+        "id": 34,
+        "prodName": "Rött Te Pu",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_6_pu.png",
+        "prodPrice": 59,
+        "huvudKat": 4,
+        "underKat": 4.2
+    },{
+        "id": 35,
+        "prodName": "Rött Te Pue",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_10_mango.png",
+        "prodPrice": 49,
+        "huvudKat": 4,
+        "underKat": 4.3
+    },{
+        "id": 36,
+        "prodName": "Rött Te Mango",
+        "prodDesc": "Pu-erh te hör till vad kineserna själva kallar hei cha - svarta eller mörka teer - me som framför allt är känt som puer-te. Vi kallar det för rött te.",
+        "image": "red_11_pu.png",
+        "prodPrice": 49,
+        "huvudKat": 4,
+        "underKat": 4.3    
     }
 ]

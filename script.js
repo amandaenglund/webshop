@@ -4,6 +4,17 @@ $(document).ready(function(){
     var password = "123"
     var huvudKat = "";
     var produktCard = "";
+
+    var shoppingCart = [];
+
+
+    
+    //checkar om sessionstorage finns för shoppingcart, annars skapar vi den
+    if (sessionStorage.shoppingCart == null){
+        var json_str = JSON.stringify(shoppingCart);
+        sessionStorage.shoppingCart = json_str; 
+    }
+
     
             
     if (sessionStorage.userId == null) {
@@ -225,7 +236,6 @@ $(document).ready(function(){
 
         $(".allProducts").empty();
         $(".jumbotron").hide(); 
-        console.log("visa produktinfo");
 
         var value = val;
         
@@ -254,12 +264,29 @@ $(document).ready(function(){
 
     addToCart = function(val){
 
-        $(".allProducts").empty();
-        $(".allProducts").append("tillagd i kundvagnen");
-        console.log("tillagd");
+        var shoppingCart = JSON.parse(sessionStorage.shoppingCart);
+        shoppingCart.push(produkter[val-1]);
 
+        alert("tillagd i kundvagnen");
+
+        var json_str = JSON.stringify(shoppingCart);
+        sessionStorage.shoppingCart = json_str; 
+
+        console.log(sessionStorage.shoppingCart);
 
     };
+
+
+    delCartItem = function(i){
+        var shoppingCart = JSON.parse(sessionStorage.shoppingCart);
+        shoppingCart.splice(i, 1);
+
+        var json_str = JSON.stringify(shoppingCart);
+        sessionStorage.shoppingCart = json_str;
+
+        kundvagn();
+
+    }
 
 
 
@@ -301,10 +328,44 @@ $(document).ready(function(){
 
 
     //Kundvagn
-    $('#shoppingCart').click(function() {
+    kundvagn = function() {
         console.log("Nu hamna vi i kundvagnen :)");
-        //$(".container").html("");
-    });
+        
+        $(".container").html("<h3>Allt gött te du ska köpa:</h3>");
+
+        var shoppingCart = JSON.parse(sessionStorage.shoppingCart);
+
+        var cartProdName = "<ul>"
+        var cartProdPrice = "<ul>"
+        var cartRemove = "<ul>"
+
+        for(var i = 0; i < shoppingCart.length; i++){
+            cartProdName += "<li>" + shoppingCart[i].prodName + "</li>";
+            cartProdPrice += "<li>" + shoppingCart[i].prodPrice + " kr</li>";
+            cartRemove += "<li><a href='#' onClick='delCartItem(" + i + ")'>Radera</a></li>";
+        }
+
+        cartProdName += "<li>Frakt</li></ul>"
+        cartProdPrice += "<li>55 kr</li></ul>"
+        cartRemove += "</ul>"
+
+        console.log(cartProdName);
+
+        $('.container').append(cartProdName + cartProdPrice + cartRemove);
+
+
+        var totalPrice = 55;
+        for(var i = 0; i < shoppingCart.length; i++) {
+            totalPrice += shoppingCart[i].prodPrice;
+        }
+        $(".container").append("<h3>Totalpris: " + totalPrice + " kr</h3>");
+
+        var json_str = JSON.stringify(shoppingCart);
+        sessionStorage.shoppingCart = json_str; 
+        
+
+
+    };
 
     
 
