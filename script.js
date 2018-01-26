@@ -1,11 +1,14 @@
 $(document).ready(function(){ 
 
+    //lite variablar i toppen som sig bör
     var user = "janne"
     var password = "123"
     var huvudKat = "";
     var produktCard = "";
-
     var shoppingCart = [];
+    var userAdmin = "admin"
+    var passwordAdmin = "admin"
+
 
 
     
@@ -387,6 +390,100 @@ $(document).ready(function(){
     }
 
     
+
+
+    //////ADMIN-SIDAN//////
+
+
+        //Sparar användarens namn i sessionStorage
+        sessionStorage.setItem("userIdAdmin", $(".usernameAdmin").val() );
+
+
+
+        if (sessionStorage.userIdAdmin == null) {
+            // Är vi inte inloggade
+            console.log("vi är inte inloggade på admin")
+            $('.admin').html("Var god logga in!");
+            $(".adminMenu").hide(); 
+
+
+        } else {
+            //om vi är inloggade
+        
+            visaAdminSidan();
+        }
+
+
+        //Login-knappen
+        $("#loginAdmin").click(function(){
+
+    
+            if ( $(".usernameAdmin").val() == userAdmin && $(".passAdmin").val() == passwordAdmin ) {
+                console.log("välkommen till Admin-sidan!");
+                sessionStorage.setItem("userIdAdmin", $(".usernameAdmin").val() );
+
+    
+            } else {
+                console.log("fel lösenord!");
+                alert("Fel lösenord, var god försök igen!");
+            }
+
+        });
+    
+
+        //Logout-knappen
+        $("#logoutAdmin").click(function(){
+            console.log("du är utloggad från admin");
+            $('.admin').html("Du är nu utloggad!");
+            sessionStorage.clear()
+            location.reload();      
+            
+        });
+
+
+
+        function visaAdminSidan() {
+            $('.admin').append("Välkommen till admin-sidan!");
+            $('.adminMenu').append('<ul><li>Start</li><li class="visaKunder">Kundlista</li><li>Orderlista</li><li>Epostlista</li></ul>');
+
+            //visa menyn
+            //appenda ut produkterna
+        };
+
+       
+        //Printar ut en lista på våra kunder på sidan
+        $('.visaKunder').click(function() {
+            console.log("printar ut lista på kunder");
+
+                //Fetchar JSON-filen kunder
+                fetch("json/kunder.json")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(data) {
+                    kundLista = data;
+
+                    $('.adminList').append("Våra kunder: ");
+
+
+                    for(i = 0; i < kundLista.length; i++) {
+
+                        var kundId = (kundLista[i].id);
+                        var kundEmail = (kundLista[i].email);
+                        var printKundLista = "";
+        
+                        console.log(kundId);
+            
+                        var printKundLista = '<ul><li>' + kundId + '</li><li>' + kundEmail + '</li></ul>';
+                        $('.adminList').append(printKundLista);
+                    };
+        
+
+
+                });
+            
+        });
+
 
 
 //stänger allt
