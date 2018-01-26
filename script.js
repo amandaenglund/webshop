@@ -363,9 +363,28 @@ $(document).ready(function(){
         var json_str = JSON.stringify(shoppingCart);
         sessionStorage.shoppingCart = json_str; 
         
+        $(".container").append("<button onclick='finishOrder()'>Slutför köp</button>");
 
 
     };
+
+
+    finishOrder = function() {
+
+        if (sessionStorage.userId == null) {
+            // Är vi inte inloggade
+           
+            alert("Du måste logga in först!")
+
+        } else {
+           
+            $(".container").html("Tack för din order :)");
+
+        }
+    
+
+
+    }
 
     
 
