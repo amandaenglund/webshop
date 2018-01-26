@@ -63,6 +63,11 @@ footer {
 }
 
 
+.admin-container {
+    padding: 30px;
+}
+
+
 @media (max-width:768px) {
     .main {
         margin-top:0;
