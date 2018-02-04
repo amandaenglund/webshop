@@ -62,10 +62,22 @@ footer {
     padding-left: 20px;
 }
 
+/*ADMIN SIDAN*/
 
 .admin-container {
     padding: 30px;
 }
+
+.adminMenu {
+    list-style: none;
+}
+
+.adminList {
+    padding-top: 300px;
+    padding-left: 30px;
+}
+
+
 
 
 @media (max-width:768px) {

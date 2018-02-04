@@ -452,7 +452,7 @@ console.log(sessionStorage);
             $("#loginAdmin").hide(); 
             $("#logoutAdmin").show(); 
             $(".adminMenu").html(" "); 
-            $('.adminMenu').append('<ul><li>Start</li><li onclick="visaKunder()">Kundlista</li><li>Orderlista</li><li>Epostlista</li></ul>');
+            $('.adminMenu').append('<div class="nav navbar-nav"><ul><li class"adminMenu"><a href="#">Start</a></li><li onclick="visaKunder()" class"adminMenu"><a href="#">Kundlista</a></li><li class"adminMenu"><a href="#">Orderlista</a></li><li class"adminMenu"><a href="#">Epostlista</a></li></ul></div>');
             console.log("nu är vi inloggade")
             //visa menyn
             //appenda ut produkterna
@@ -466,7 +466,7 @@ console.log(sessionStorage);
             console.log("printar ut lista på kunder");
             $('.adminList').show(); 
             $('.adminList').html(" ");
-            
+
                 //Fetchar JSON-filen kunder
                 fetch("json/kunder.json")
                 .then(function(response) {
