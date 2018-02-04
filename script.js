@@ -395,10 +395,8 @@ $(document).ready(function(){
     //////ADMIN-SIDAN//////
 
 
-        //Sparar användarens namn i sessionStorage
-        sessionStorage.setItem("userIdAdmin", $(".usernameAdmin").val() );
 
-
+console.log(sessionStorage);
 
         if (sessionStorage.userIdAdmin == null) {
             // Är vi inte inloggade
@@ -420,8 +418,9 @@ $(document).ready(function(){
     
             if ( $(".usernameAdmin").val() == userAdmin && $(".passAdmin").val() == passwordAdmin ) {
                 console.log("välkommen till Admin-sidan!");
+                //Sparar användarens namn i sessionStorage
                 sessionStorage.setItem("userIdAdmin", $(".usernameAdmin").val() );
-
+                visaAdminSidan();
     
             } else {
                 console.log("fel lösenord!");
@@ -435,24 +434,25 @@ $(document).ready(function(){
         $("#logoutAdmin").click(function(){
             console.log("du är utloggad från admin");
             $('.admin').html("Du är nu utloggad!");
-            sessionStorage.clear()
-            location.reload();      
-            
+            sessionStorage.clear();           
         });
 
 
 
         function visaAdminSidan() {
-            $('.admin').append("Välkommen till admin-sidan!");
-            $('.adminMenu').append('<ul><li>Start</li><li class="visaKunder">Kundlista</li><li>Orderlista</li><li>Epostlista</li></ul>');
-
+            $('.admin').html("Välkommen till admin-sidan!");
+            $(".adminMenu").show(); 
+            $('.adminMenu').append('<ul><li>Start</li><li onclick="visaKunder()">Kundlista</li><li>Orderlista</li><li>Epostlista</li></ul>');
+            console.log("nu är vi inloggade")
             //visa menyn
             //appenda ut produkterna
         };
 
        
         //Printar ut en lista på våra kunder på sidan
-        $('.visaKunder').click(function() {
+
+        
+        visaKunder = function() {
             console.log("printar ut lista på kunder");
 
                 //Fetchar JSON-filen kunder
@@ -482,7 +482,7 @@ $(document).ready(function(){
 
                 });
             
-        });
+        };
 
 
 
