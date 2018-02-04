@@ -465,7 +465,8 @@ console.log(sessionStorage);
         visaKunder = function() {
             console.log("printar ut lista på kunder");
             $('.adminList').show(); 
-
+            $('.adminList').html(" ");
+            
                 //Fetchar JSON-filen kunder
                 fetch("json/kunder.json")
                 .then(function(response) {
@@ -486,6 +487,7 @@ console.log(sessionStorage);
                         console.log(kundId);
             
                         var printKundLista = '<ul><li>' + kundId + '</li><li>' + kundEmail + '</li></ul>';
+                        
                         $('.adminList').append(printKundLista);
                     };
         
