@@ -403,6 +403,9 @@ console.log(sessionStorage);
             console.log("vi är inte inloggade på admin")
             $('.admin').html("Var god logga in!");
             $(".adminMenu").hide(); 
+            $("#loginAdmin").show(); 
+            $("#logoutAdmin").hide(); 
+
 
 
         } else {
@@ -434,6 +437,10 @@ console.log(sessionStorage);
         $("#logoutAdmin").click(function(){
             console.log("du är utloggad från admin");
             $('.admin').html("Du är nu utloggad!");
+            $(".adminMenu").hide(); 
+            $("#logoutAdmin").hide(); 
+            $("#loginAdmin").show(); 
+            $('.adminList').hide(); 
             sessionStorage.clear();           
         });
 
@@ -442,6 +449,9 @@ console.log(sessionStorage);
         function visaAdminSidan() {
             $('.admin').html("Välkommen till admin-sidan!");
             $(".adminMenu").show(); 
+            $("#loginAdmin").hide(); 
+            $("#logoutAdmin").show(); 
+            $(".adminMenu").html(" "); 
             $('.adminMenu').append('<ul><li>Start</li><li onclick="visaKunder()">Kundlista</li><li>Orderlista</li><li>Epostlista</li></ul>');
             console.log("nu är vi inloggade")
             //visa menyn
