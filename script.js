@@ -382,6 +382,10 @@ $(document).ready(function(){
         } else {
            
             $(".container").html("Tack för din order :)");
+            console.log("töm kundvagnen")
+            sessionStorage.clear();  
+            console.log(sessionStorage);
+
 
         }
     
@@ -396,7 +400,7 @@ $(document).ready(function(){
 
 
 
-console.log(sessionStorage);
+        console.log(sessionStorage);
 
         if (sessionStorage.userIdAdmin == null) {
             // Är vi inte inloggade
