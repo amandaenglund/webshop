@@ -464,6 +464,7 @@ console.log(sessionStorage);
         
         visaKunder = function() {
             console.log("printar ut lista på kunder");
+            $('.adminList').show(); 
 
                 //Fetchar JSON-filen kunder
                 fetch("json/kunder.json")
