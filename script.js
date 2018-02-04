@@ -338,9 +338,9 @@ $(document).ready(function(){
 
         var shoppingCart = JSON.parse(sessionStorage.shoppingCart);
 
-        var cartProdName = "<ul>"
-        var cartProdPrice = "<ul>"
-        var cartRemove = "<ul>"
+        var cartProdName = "<ul class='cartList'>"
+        var cartProdPrice = "<ul class='cartList'>"
+        var cartRemove = "<ul class='cartList'>"
 
         for(var i = 0; i < shoppingCart.length; i++){
             cartProdName += "<li>" + shoppingCart[i].prodName + "</li>";
@@ -354,7 +354,7 @@ $(document).ready(function(){
 
         console.log(cartProdName);
 
-        $('.container').append(cartProdName + cartProdPrice + cartRemove);
+        $('.container').append("<div class='allCart'><div class='cart'>" + cartProdName + "</div><div class='cart'>" +  cartProdPrice + "</div><div class='cart'>" +   cartRemove + "</div></div>");
 
 
         var totalPrice = 55;

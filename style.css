@@ -62,6 +62,22 @@ footer {
     padding-left: 20px;
 }
 
+/* CART */
+.allCart {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.cart {
+    padding: 20px;
+}
+
+.cartList {
+    list-style-type: none;
+}
+
 /*ADMIN SIDAN*/
 
 .admin-container {
